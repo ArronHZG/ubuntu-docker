@@ -1,1 +1,1 @@
-sudo docker build -t arron/cuda10 .
+sudo docker build -t arron/ubuntu18.04 .

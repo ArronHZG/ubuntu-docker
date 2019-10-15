@@ -1,6 +1,6 @@
 # build docker image
 ```
-sudo docker pull nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+sudo docker pull nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 ```
 
 # docker-nvidia
@@ -15,12 +15,12 @@ sudo systemctl restart docker
 
 # docker run
 ```
-sudo docker run -d -it  -v /home/arron/dataset/:/root/dataset/ --gpus 2 --name deeplearning nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+sudo docker run -d -it  -v /home/arron/:/home/arron/ --gpus 1 --name deeplearning nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 ```
 
 # enter contatiners
 ```
-sudo docker exec -it deeplearning /bin/bash
+sudo docker exec -it deeplearning bash
 nvidia-smi
 ```
 
@@ -39,6 +39,55 @@ docker commit containerId arron/ubuntu16.04_tensorflow_remote
 docker tag arron/ubuntu16.04_tensorflow_remote arron/ubuntu16.04_tensorflow_remote
 # docker save -o [name].tar [name]:[tag]
 docker save -o ubuntu16.04_tensorflow_remote-190917.tar arron/ubuntu16.04_tensorflow_remote
+```
+
+# vim
+```shell script
+apt-get update
+apt-get install vim
+```
+
+# 清华源
+```shell script
+cp /etc/apt/sources.list /etc/apt/sources.list.backup
+rm /etc/apt/sources.list
+vim /etc/apt/sources.list
+```
+```
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+```
+
+```shell script
+apt-get update
+```
+
+# oh-my-zsh
+```shell script
+apt-get install zsh
+apt-get install curl
+apt-get install git
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+
+
+# pytorch 1.3
+文件太大，单独安装
+https://pypi.tuna.tsinghua.edu.cn/packages/b4/0b/9d33aef363b6728ad937643d98be713c6c25d50ce338678ad57cee6e6fd5/torch-1.3.0-cp37-cp37m-manylinux1_x86_64.whl
+https://pypi.tuna.tsinghua.edu.cn/packages/72/b9/5e22c25a201b80cd599af910200b66872af5f5404a13dc76e9ce1a988bed/torchvision-0.4.1-cp37-cp37m-manylinux1_x86_64.whl
+
+
+```shell script
+
+
 ```
 
 # python

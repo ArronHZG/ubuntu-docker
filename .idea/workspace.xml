@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21d34865-4008-4405-954d-d1638e7d1593" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cudnn7.6.3/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ubuntu18.04-cuda10.0/Dockerfile" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569397122199</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cuda10.1&#10;pytorch 1.3">
+      <created>1571122996518</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571122996518</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -112,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dockerfile" />
     <MESSAGE value="cuda10.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="cuda10.0" />
+    <MESSAGE value="cuda10.1&#10;pytorch 1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="cuda10.1&#10;pytorch 1.3" />
   </component>
 </project>

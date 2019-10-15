@@ -1,0 +1,52 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="9">
+            <item index="0" class="java.lang.String" itemvalue="pandas" />
+            <item index="1" class="java.lang.String" itemvalue="albumentations" />
+            <item index="2" class="java.lang.String" itemvalue="progressbar" />
+            <item index="3" class="java.lang.String" itemvalue="sklearn" />
+            <item index="4" class="java.lang.String" itemvalue="TensorBoardX" />
+            <item index="5" class="java.lang.String" itemvalue="Cython" />
+            <item index="6" class="java.lang.String" itemvalue="torchsummary" />
+            <item index="7" class="java.lang.String" itemvalue="apex" />
+            <item index="8" class="java.lang.String" itemvalue="tensorflow_datasets" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="E266" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N812" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tensorflow_core._api.v2.train.*" />
+          <option value="tensorflow_core.python.keras.api._v2.keras.applications.*" />
+          <option value="tensorflow_core._api.v2.image.*" />
+          <option value="tensorflow_core.python.keras.api._v2.keras.optimizers.Adam" />
+          <option value="tensorflow.GradientTape" />
+          <option value="tensorflow_core.python.keras.api._v2.keras.losses.sparse_categorical_crossentropy" />
+          <option value="tensorflow.reduce_mean" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

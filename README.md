@@ -22,6 +22,7 @@ sudo docker run -d -it  -v /home/arron/:/home/arron/ --gpus 1 --name deeplearnin
 ```
 sudo docker exec -it deeplearning bash
 nvidia-smi
+cat /usr/local/cuda/version.txt
 ```
 
 # connect internet
@@ -111,8 +112,17 @@ source ~/.zshrc
 
 # python
 
-```bash
+清华源
+```
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+豆瓣源
+```
+pip config set global.index-url https://pypi.doubanio.com/simple
+```
+
+# 
+```
 apt-get install gcc libglib2.0-dev libsm-dev libxrender-dev
 ```
 

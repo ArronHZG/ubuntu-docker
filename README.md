@@ -35,10 +35,8 @@ sudo docker stop $(docker ps) & docker rm $(docker ps -aq)
 ```
 # save docker images
 ```
-docker commit containerId arron/ubuntu16.04_tensorflow_remote
-docker tag arron/ubuntu16.04_tensorflow_remote arron/ubuntu16.04_tensorflow_remote
-# docker save -o [name].tar [name]:[tag]
-docker save -o ubuntu16.04_tensorflow_remote-190917.tar arron/ubuntu16.04_tensorflow_remote
+sudo docker commit containerId arron/deeplearning
+sudo docker save -o 10.1-cudnn7-runtime-ubuntu18.04-pytorch1.3-tensorflow2.0.tar arron/deeplearning
 ```
 
 # vim
@@ -70,14 +68,53 @@ apt-get update
 ```
 
 # oh-my-zsh
-```shell script
+```bash
 apt-get install zsh
 apt-get install curl
 apt-get install git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
+```bash
+vim ~/.zshrc
+# update such as:
+# plugins=(git zsh-autosuggestions)
+source ~/.zshrc
+```
 
+
+# Miniconda
+```bash
+vim ~/.zshrc
+```
+```
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/root/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/root/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/root/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/root/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+```
+
+```bash
+source ~/.zshrc
+```
+```
+
+# python
+
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+apt-get install gcc libglib2.0-dev libsm-dev libxrender-dev
+```
 
 # pytorch 1.3
 文件太大，单独安装
@@ -90,9 +127,5 @@ https://pypi.tuna.tsinghua.edu.cn/packages/72/b9/5e22c25a201b80cd599af910200b668
 
 ```
 
-# python
-
-```shell
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
-```
+# tensorflow
+同上

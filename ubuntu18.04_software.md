@@ -1,3 +1,17 @@
+# apt-get
+```
+sudo apt-get install exfat-utils make gcc
+
+sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
+sudo apt-get install indicator-sysmonitor
+
+sudo add-apt-repository ppa:apt-fast/stable
+sudo apt-get install apt-fast
+
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+```
+
 # ohmyzsh
 	plugins
 		zsh-autosuggestions

@@ -120,7 +120,8 @@ conda config --set show_channel_urls yes
 
 vim .condarc
 copy 
-#######################################################
+
+
 channels:
   - defaults
 show_channel_urls: true
@@ -135,8 +136,6 @@ custom_channels:
   menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-#########################################################
-  
   
 ```
 豆瓣源

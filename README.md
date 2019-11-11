@@ -37,7 +37,7 @@ sudo apt-get install apt-fast
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get install indicator-sysmonitor
 
-sudo apt-fast install zsh curl git ssh net-tools make gcc libglib2.0-dev libsm-dev libxrender-dev exfat-utils screen
+sudo apt-fast install zsh curl git ssh net-tools make gcc libglib2.0-dev libsm-dev libxrender-dev exfat-utils screen htop
 sudo chsh -s /bin/zsh
 reboot
 
@@ -139,6 +139,18 @@ cd apex
 pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
 cd ..
 rm -r apex
+```
+
+### gdal
+
+```bash
+conda install gdal --yes
+```
+
+### other package
+
+```bash
+pip install -r requirments.txt
 ```
 
 ### jupyter lab

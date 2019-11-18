@@ -3,6 +3,7 @@ progress
 numpy
 scipy
 matplotlib
+seaborn
 pandas
 sklearn
 torchsummary

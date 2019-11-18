@@ -37,7 +37,8 @@ sudo apt-get install apt-fast
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get install indicator-sysmonitor
 
-sudo apt-fast install zsh curl git ssh net-tools make gcc libglib2.0-dev libsm-dev libxrender-dev exfat-utils screen htop
+sudo apt-fast install zsh curl git ssh net-tools make gcc libglib2.0-dev libsm-dev libxrender-dev exfat-utils
+sudo apt-fast install screen htop zip unzip rar unrar rename
 sudo chsh -s /bin/zsh
 reboot
 
@@ -119,9 +120,12 @@ pip config set global.index-url https://pypi.doubanio.com/simple
 
 ### pytorch 1.3
 
+
+
 if use cuda10.0 and pytorch 1.3
 
 ```bash
+# https://download.pytorch.org/whl/cu100/torch-1.3.0%2Bcu100-cp37-cp37m-linux_x86_64.whl
 pip install torch==1.3.0+cu100 torchvision==0.4.1+cu100 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
@@ -140,6 +144,12 @@ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cud
 cd ..
 rm -r apex
 ```
+
+error:
+
+    FileNotFoundError: [Errno 2] No such file or directory: '/usr/local/cuda/bin/nvcc': '/usr/local/cuda/bin/nvcc'
+
+
 
 ### conda package
 
@@ -288,7 +298,7 @@ Categories=Pycharm
 ### build docker image
 
 ```bash
-sudo docker pull nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
+sudo docker pull nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 ```
 
 ### docker-nvidia
@@ -304,14 +314,15 @@ sudo systemctl restart docker
 ### docker run
 
 ```bash
-sudo docker run -d -it  -v /home/:/home/  -v /mnt/:/mnt/ --gpus 1 --name deeplearning nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
+sudo docker run -d -it  -v /home/:/home/  -v /mnt/:/mnt/ --gpus 1 --name cuda10-devel nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 ```
 
 ### enter contatiners
 
 ```bash
-sudo docker exec -it deeplearning bash
+sudo docker exec -it cuda10-devel bash
 nvidia-smi
+nvcc -V
 cat /usr/local/cuda/version.txt
 ```
 
@@ -325,9 +336,9 @@ sudo docker stop $(docker ps) & docker rm $(docker ps -aq)
 
 
 ```bash
-sudo docker rmi arron/10.0-cudnn7-runtime-ubuntu18.04
-sudo docker commit [containerId] arron/10.0-cudnn7-runtime-ubuntu18.04
-sudo docker save -o arron-10.0-cudnn7-runtime-ubuntu18.04.tar arron/10.0-cudnn7-runtime-ubuntu18.04
+sudo docker rmi arron/10.0-cudnn7-devel-ubuntu18.04
+sudo docker commit [containerId] arron/10.0-cudnn7-devel-ubuntu18.04
+sudo docker save -o arron-10.0-cudnn7-devel-ubuntu18.04.tar arron/10.0-cudnn7-devel-ubuntu18.04
 ```
 
 ## others

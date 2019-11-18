@@ -11,9 +11,7 @@ tqdm
 pillow
 albumentations
 TensorBoardX
-pycocotools
 imantics
-opencv-python
 pinyin
 scikit-image
 pyshp

@@ -27,7 +27,7 @@ sudo apt-get update
 ## apt-get
 
 ```bash
-sudo apt-get install vim
+sudo apt-get install vim software-properties-common
 
 sudo add-apt-repository ppa:graphics-drivers/ppa
 
@@ -141,16 +141,16 @@ cd ..
 rm -r apex
 ```
 
-### gdal
+### conda package
 
 ```bash
-conda install gdal --yes
+conda install --yes --file conda_requirements.txt
 ```
 
 ### other package
 
 ```bash
-pip install -r requirments.txt
+pip install -r requirements.txt
 ```
 
 ### jupyter lab
@@ -207,7 +207,23 @@ export CUDA_HOME=/usr/local/cuda
 
 ```bash
 sudo apt-add-repository ppa:hzwhuang/ss-qt5
-sudo apt-fast update
+'''
+
+In ubuntu18 ,there will be some error:
+
+```txt
+E: The repository 'http://ppa.launchpad.net/hzwhuang/ss-qt5/ubuntu bionic Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+
+```
+
+fix:
+```
+cd /etc/apt/sources.list.d
+sudo vim hzwhuang-ubuntu-ss-qt5-bionic.list
+# change bionic to xenial
+sudo apt-get update
 sudo apt-fast install shadowsocks-qt5s
 ```
 
@@ -272,7 +288,7 @@ Categories=Pycharm
 ### build docker image
 
 ```bash
-sudo docker pull nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
+sudo docker pull nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 ```
 
 ### docker-nvidia
@@ -288,7 +304,7 @@ sudo systemctl restart docker
 ### docker run
 
 ```bash
-sudo docker run -d -it  -v /home/arron/:/home/arron/ --gpus 1 --name deeplearning nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
+sudo docker run -d -it  -v /home/:/home/  -v /mnt/:/mnt/ --gpus 1 --name deeplearning nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 ```
 
 ### enter contatiners
@@ -307,9 +323,11 @@ sudo docker stop $(docker ps) & docker rm $(docker ps -aq)
 
 ### save docker images
 
+
 ```bash
-sudo docker commit containerId arron/deeplearning
-sudo docker save -o 10.1-cudnn7-runtime-ubuntu18.04-pytorch1.3-tensorflow2.0.tar arron/deeplearning
+sudo docker rmi arron/10.0-cudnn7-runtime-ubuntu18.04
+sudo docker commit [containerId] arron/10.0-cudnn7-runtime-ubuntu18.04
+sudo docker save -o arron-10.0-cudnn7-runtime-ubuntu18.04.tar arron/10.0-cudnn7-runtime-ubuntu18.04
 ```
 
 ## others

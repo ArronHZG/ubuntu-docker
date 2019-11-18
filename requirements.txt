@@ -16,3 +16,5 @@ pinyin
 scikit-image
 pyshp
 h5py
+pytorch-ignite
+yacs

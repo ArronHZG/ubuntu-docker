@@ -100,11 +100,18 @@ unset __conda_setup
 # <<< conda initialize <<<
 ```
 
-### conda source
+#### conda source
 
 [use 清华源 to accurate download](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/)
 
-### pip source
+#### base
+if you don't want to see (base)  on terminal:
+```txt
+# add in ~/.condarc
+changeps1: false
+
+```
+### pip
 
 清华源
 
@@ -201,7 +208,7 @@ jupyter lab
 
 ## cuda
 
-if cuda has installed.
+if cuda has installed,some path should be exported.
 
 ```bash
  sudo vim /etc/profile
@@ -337,7 +344,7 @@ sudo docker stop $(docker ps) & docker rm $(docker ps -aq)
 
 ```bash
 sudo docker rmi arron/10.0-cudnn7-devel-ubuntu18.04
-sudo docker commit [containerId] arron/10.0-cudnn7-devel-ubuntu18.04
+docker commit -a "arron" -m "cuda10 torch1.3.0" [containerId]  arron/cuda10:torch1.3.0
 sudo docker save -o arron-10.0-cudnn7-devel-ubuntu18.04.tar arron/10.0-cudnn7-devel-ubuntu18.04
 ```
 

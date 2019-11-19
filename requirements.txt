@@ -5,7 +5,7 @@ scipy
 matplotlib
 seaborn
 pandas
-sklearn
+scikit-learn
 torchsummary
 progressbar
 tqdm

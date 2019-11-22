@@ -11,7 +11,7 @@ progressbar
 tqdm
 pillow
 albumentations
-TensorBoardX
+tensorboard
 imantics
 pinyin
 scikit-image

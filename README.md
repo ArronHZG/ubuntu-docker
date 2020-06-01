@@ -125,21 +125,12 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip config set global.index-url https://pypi.doubanio.com/simple
 ```
 
-### pytorch 1.3
+### pytorch 1.5
 
-
-
-if use cuda10.0 and pytorch 1.3
+if use cuda10.1 and pytorch 1.5
 
 ```bash
-# https://download.pytorch.org/whl/cu100/torch-1.3.0%2Bcu100-cp37-cp37m-linux_x86_64.whl
-pip install torch==1.3.0+cu100 torchvision==0.4.1+cu100 -f https://download.pytorch.org/whl/torch_stable.html
-```
-
-if use cuda10.1 and pytorch 1.3
-
-```bash
-pip install torch===1.3.0 torchvision===0.4.1 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ### apex

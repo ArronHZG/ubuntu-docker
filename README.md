@@ -345,3 +345,22 @@ sudo docker save -o arron-10.0-cudnn7-devel-ubuntu18.04.tar arron/10.0-cudnn7-de
 - vscode
 - sogou
 - teamviewer
+
+## ssh
+
+A/B host computer
+```bash
+ssh-keygen
+```
+
+A host computer
+
+```bash
+scp ~/.ssh/id_rsa.pub  arron@10.103.xxx.xxx:/home/arron
+```
+
+B host computer
+
+```bash
+cat id_rsa.pub >> ~/.ssh/authorized_keys 
+```

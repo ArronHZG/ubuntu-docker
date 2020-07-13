@@ -73,6 +73,14 @@ sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 sudo mv PowerlineSymbols.otf /usr/share/fonts/OTF/
 ```
 
+在docker中
+(anon):12: character not in range
+.zshrc 和 .bashrc 文件底部添加以下两行：
+```bash
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+```
+
 ## python
 
 ### Miniconda

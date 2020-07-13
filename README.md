@@ -37,7 +37,7 @@ sudo apt-get install apt-fast
 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get install indicator-sysmonitor
 
-sudo apt-fast install zsh curl git ssh net-tools make gcc libglib2.0-dev libsm-dev libxrender-dev exfat-utils
+sudo apt-fast install zsh curl git ssh net-tools iputils-ping make gcc libglib2.0-dev libsm-dev libxrender-dev exfat-utils
 sudo apt-fast install screen htop zip unzip rar unrar rename
 sudo chsh -s /bin/zsh
 reboot

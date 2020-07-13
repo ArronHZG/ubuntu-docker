@@ -327,7 +327,7 @@ sudo systemctl restart docker
 ### docker run
 
 ```bash
-sudo docker run -d -it  -v /home/:/home/  -v /mnt/:/mnt/ --gpus 1 --name cuda10-devel nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+sudo docker run -d -it  -v /home/:/home/  -v /mnt/:/mnt/ -p 8022:22 --gpus 1 --name cuda10-devel nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 ```
 
 ### enter contatiners
@@ -338,6 +338,24 @@ nvidia-smi
 nvcc -V
 cat /usr/local/cuda/version.txt
 ```
+
+### contatiner ssh
+
+
+```
+vim vi /etc/ssh/sshd_config
+
+RSAAuthentication yes #启用 RSA 认证
+PubkeyAuthentication yes #启用公钥私钥配对认证方式
+AuthorizedKeysFile .ssh/authorized_keys #公钥文件路径（和上面生成的文件同）
+PermitRootLogin yes #root能使用ssh登录
+```
+
+'''
+service ssh restart
+```
+
+将远程访问公钥写入authorized_keys之中, 方法见[ssh](## ssh)
 
 ### rm all
 

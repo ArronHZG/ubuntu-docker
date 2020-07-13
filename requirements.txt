@@ -19,3 +19,4 @@ pyshp
 h5py
 pytorch-ignite
 yacs
+numba

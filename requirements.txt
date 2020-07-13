@@ -20,3 +20,7 @@ h5py
 pytorch-ignite
 yacs
 numba
+fire
+glog
+pretrainedmodels
+joblib

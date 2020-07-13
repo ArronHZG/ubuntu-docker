@@ -327,7 +327,9 @@ sudo systemctl restart docker
 ### docker run
 
 ```bash
-sudo docker run -d -it  -v /home/:/home/  -v /mnt/:/mnt/ -p 8022:22 --gpus 1 --name cuda10-devel nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+sudo docker run -d -it  -v /home/:/home/  -v /mnt/:/mnt/ -p 8022:22  --shm-size=2G --gpus 1 --name cuda10-devel nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
+
+# --runtime=nvidia
 ```
 
 ### enter contatiners

@@ -60,7 +60,14 @@ sudo vim ~/.zshrc
 source ~/.zshrc
 ```
 
-### Ubuntu terminal zsh agnoster theme garbled
+### theme
+
+https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+推荐
+af-magic ys pure avit bira 
+
+### Ubuntu terminal zsh agnoster theme garbled agnoster
 
 [Ubuntu 终端zsh的agnoster主题乱码](https://blog.csdn.net/CoderMannul/article/details/90724645)
 

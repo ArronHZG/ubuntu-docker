@@ -65,7 +65,7 @@ source ~/.zshrc
 https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 推荐
-af-magic ys pure avit bira 
+theunraveler af-magic ys pure avit bira 
 
 ### Ubuntu terminal zsh agnoster theme garbled agnoster
 

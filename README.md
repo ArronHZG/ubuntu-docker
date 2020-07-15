@@ -347,10 +347,10 @@ cat /usr/local/cuda/version.txt
 ```
 vim vi /etc/ssh/sshd_config
 
-RSAAuthentication yes #启用 RSA 认证
+UsePAM no #取消pam登录限制
 PubkeyAuthentication yes #启用公钥私钥配对认证方式
 AuthorizedKeysFile .ssh/authorized_keys #公钥文件路径（和上面生成的文件同）
-PermitRootLogin yes #root能使用ssh登录
+PermitRootLogin yes #root能使用ssh登录 , 需要使用 passwd 给容器设置密码
 ```
 
 '''
@@ -398,4 +398,10 @@ B host computer
 
 ```bash
 cat id_rsa.pub >> ~/.ssh/authorized_keys 
+```
+
+
+or 
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub arron@10.103.xxx.xxx
 ```

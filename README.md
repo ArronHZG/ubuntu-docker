@@ -140,12 +140,12 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip config set global.index-url https://pypi.doubanio.com/simple
 ```
 
-### pytorch 1.5
+### pytorch 1.6
 
-if use cuda10.1 and pytorch 1.5
+cuda10.2 and pytorch 1.6
 
 ```bash
-pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.6.0+cu102 torchvision==0.7.0+cu102 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ### apex
@@ -224,6 +224,11 @@ if cuda has installed,some path should be exported.
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CUDA_HOME=/usr/local/cuda
+ ```
+ 
+ ```bash
+ source /etc/profile
+ zsh
  ```
 
 ## ss

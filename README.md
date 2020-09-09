@@ -348,6 +348,22 @@ Categories=Pycharm
 
 ## docker
 
+### download docker for ubuntu
+
+https://docs.docker.com/engine/install/ubuntu/
+
+
+### docker 不需要sudo 权限
+
+```
+
+sudo groupadd docker
+sudo gpasswd -a <你的用户名> docker
+sudo service docker restart
+```
+
+重开shell
+
 ### build docker image
 
 ```bash

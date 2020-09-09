@@ -38,7 +38,7 @@ sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
 sudo apt-get install indicator-sysmonitor
 
 sudo apt-fast install zsh curl git ssh net-tools iputils-ping make gcc libglib2.0-dev libsm-dev libxrender-dev exfat-utils
-sudo apt-fast install screen htop zip unzip rar unrar rename
+sudo apt-fast install screen htop zip unzip rar unrar rename lightdm
 sudo chsh -s /bin/zsh
 reboot
 
@@ -212,9 +212,31 @@ start
 jupyter lab
 ```
 
+# nvidia driver
+
+remove nouveau
+```
+sudo apt-get --purge remove xserver-xorg-video-nouveau
+sudo apt-get --purge remove gvfs-daemons
+sudo apt-get --purge remove libdrm-nouveau2/now
+```
+
+download nvidia driver
+```
+sudo bash NVIDIA-Linux-x86_64-440.100.run
+```
+
 ## cuda
 
-if cuda has installed,some path should be exported.
+download cuda
+
+
+```
+sudo bash cuda_10.2.89_440.33.01_linux.run
+sudo bash cuda_10.2.1_linux.run
+```
+
+if cuda has installed, some path should be exported.
 
 ```bash
  sudo vim /etc/profile
@@ -229,6 +251,18 @@ export CUDA_HOME=/usr/local/cuda
  ```bash
  source /etc/profile
  zsh
+ ```
+ 
+ test
+ ```
+ nvcc -V
+ ```
+ 
+ ## cudnn
+ 
+ download cudnn
+ ```
+ sudo dpkg -i libcudnn8_8.0.3.33-1+cuda10.2_amd64.deb
  ```
 
 ## ss

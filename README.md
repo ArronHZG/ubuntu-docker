@@ -214,11 +214,12 @@ jupyter lab
 
 # nvidia driver
 
-remove nouveau
+remove nouveau and reboot
 ```
 sudo apt-get --purge remove xserver-xorg-video-nouveau
 sudo apt-get --purge remove gvfs-daemons
 sudo apt-get --purge remove libdrm-nouveau2/now
+sudo reboot
 ```
 
 download nvidia driver
@@ -440,7 +441,7 @@ cat id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
 
-or 
+or use A computer
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub arron@10.103.xxx.xxx
 ```

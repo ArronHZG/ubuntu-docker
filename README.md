@@ -489,9 +489,11 @@ sudo service smbd restart
 sudo service nmbd restart
 ```
 
+给现有用户开通samba 权限
+```
+sudo smbpasswd -a [用户名] # 用户密码独立设置
+```
 
-
-
-配置参考
+其他配置参考
 https://www.cnblogs.com/kevingrace/p/8662088.html
 

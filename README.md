@@ -461,3 +461,37 @@ or use A computer
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub arron@10.103.xxx.xxx
 ```
+## samba
+本地使用图像化界面远程访问服务器文件
+```shell
+sudo apt-get install samba
+```
+默认配置为每个用户可以访问到home下自己的文件夹
+
+[ubuntu下的Samba配置：使每个用户可以用自己的用户名和密码登录自己的home目录](https://blog.csdn.net/fly_qj/article/details/21744797)
+```shell
+sudo vim /etc/samba/smb.conf
+```
+修改内容:
+找到[homes]项，此项默认是注释掉的，取消其注释，然后修改其具体内容，修改成如下：
+```
+[homes]
+   comment = Home Directories
+   browseable = yes
+   read only = no
+   create mask = 0755
+   directory mask = 0755
+   valid users = %S
+```
+重启 samba
+```
+sudo service smbd restart
+sudo service nmbd restart
+```
+
+
+
+
+配置参考
+https://www.cnblogs.com/kevingrace/p/8662088.html
+

@@ -497,3 +497,9 @@ sudo smbpasswd -a [用户名] # 用户密码独立设置
 其他配置参考
 https://www.cnblogs.com/kevingrace/p/8662088.html
 
+##
+修改键位
+美化桌面
+```shell
+sudo apt install gnome-tweak-tool
+``

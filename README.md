@@ -502,4 +502,12 @@ https://www.cnblogs.com/kevingrace/p/8662088.html
 美化桌面
 ```shell
 sudo apt install gnome-tweak-tool
-``
+```
+ubuntu 触摸板增强
+```shell
+sudo apt-get install fusuma
+```
+ubuntu 剪切版历史记录
+```
+sudo apt-get install  parcellite
+```

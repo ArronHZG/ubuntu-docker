@@ -179,6 +179,8 @@ pip install -r requirements.txt
 ### jupyter lab
 
 ```bash
+conda install nb_conda
+# or
 conda install -c conda-forge jupyterlab
 ```
 

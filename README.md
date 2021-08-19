@@ -56,9 +56,23 @@ sudo apt-get install autojump
 ```bash
 sudo vim ~/.zshrc
 # update such as:
-# plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search extract autojump)
+# plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search extract autojump z last-working-dir)
 source ~/.zshrc
 ```
+
+
+```
+# 1.install
+pip install thefuck
+# 2.在~/.bashrc,~/.zshrc等中配置
+#编辑bashrc配置文件
+vim ~/.bashrc
+#在文件尾加入一行
+eval "$(thefuck --alias fuck)"
+#使生效
+source ~/.bashrc
+```
+
 
 ### theme
 

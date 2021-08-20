@@ -54,7 +54,7 @@ sudo apt-get install autojump
 ```
 
 ```bash
-sudo vim ~/.zshrc
+vim ~/.zshrc
 # update such as:
 # plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search extract autojump z last-working-dir)
 source ~/.zshrc
